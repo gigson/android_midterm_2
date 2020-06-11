@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.second_midterm.fragments.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notification"
+            app:destination="@id/navigation_statistics" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_data"
+        android:name="com.example.second_midterm.fragments.DataFragment"
+        android:label="Data"
+        tools:layout="@layout/fragment_data" />
+
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="com.example.second_midterm.fragments.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics">
+
+        <argument
+            android:name="amount"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>
